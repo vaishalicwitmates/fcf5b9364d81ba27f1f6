@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "aa2df122-7c40-491c-8523-e55ab26f3f64",
+		"name": "mongo-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "this request is for getting all the users from the db"
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/user/606ed0e84d003d40ffe6d2ef",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"606ed0e84d003d40ffe6d2ef"
+					]
+				},
+				"description": "This request is for getting particular user from the db by passing id"
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user\": {\"firstName\": \"test-first-name\", \"lastName\": \"test-last-name\", \"email\": \"test@test.com\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user"
+					]
+				},
+				"description": "this method is used to create record in user table"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user\": {\"firstName\": \"updated-first-name\", \"lastName\": \"updated-last-name\", \"email\": \"test@test.com\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user/606ed0e84d003d40ffe6d2ef",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"606ed0e84d003d40ffe6d2ef"
+					]
+				},
+				"description": "this method is used to update record"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/user/606ed6654d003d4922333601",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"606ed6654d003d4922333601"
+					]
+				},
+				"description": "this methods is used to delete record"
+			},
+			"response": []
+		},
+		{
+			"name": "typeahead",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/typeahead/ty",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"typeahead",
+						"ty"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
